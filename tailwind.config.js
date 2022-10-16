@@ -13,9 +13,16 @@ module.exports = {
         extend: {
             fontFamily: {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                dmsans:['"DM Sans"', ...defaultTheme.fontFamily.sans]
             },
+            colors: {
+                'sec': '#cdc2ae',
+              },
         },
     },
 
-    plugins: [require('@tailwindcss/forms'), require('@tailwindcss/typography')],
+    plugins: [
+        require('@tailwindcss/forms'), 
+        require('@tailwindcss/typography')
+    ],
 };
