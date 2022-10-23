@@ -7,6 +7,7 @@ module.exports = {
         './vendor/laravel/jetstream/**/*.blade.php',
         './storage/framework/views/*.php',
         './resources/views/**/*.blade.php',
+        "./node_modules/flowbite/**/*.js",
     ],
 
     theme: {
@@ -17,12 +18,19 @@ module.exports = {
             },
             colors: {
                 'sec': '#cdc2ae',
+                'pri': '#ece5c7',
+                'back': '#f9f6ec',
+                'bluePri' : '#3a4c5d',
+                'blueSec' : '#61819e',
+                'db3': '#dbdbdb',
               },
         },
     },
 
     plugins: [
         require('@tailwindcss/forms'), 
-        require('@tailwindcss/typography')
+        require('@tailwindcss/typography'),
+        require('flowbite/plugin'),
     ],
 };
+

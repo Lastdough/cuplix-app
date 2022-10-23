@@ -26,3 +26,12 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+
+Route::get('/movies', function(){
+    return view('movies-menu');
+})->name('movies');
+
+Route::get('/trending', function(){
+    return view('trending-menu');
+})->name('trending');
+

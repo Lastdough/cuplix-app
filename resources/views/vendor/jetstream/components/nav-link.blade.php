@@ -9,7 +9,7 @@ $classes = ($active ?? false)
 @php
 $classes = ($active ?? false)
             ? 'inline-flex items-center px-1 pt-1 text-xl font-medium leading-5 text-black'
-            : 'inline-flex items-center px-1 pt-1 text-xl font-medium leading-5 text-white transition';
+            : 'inline-flex items-center px-1 pt-1 text-xl font-medium leading-5 text-black transition';
 @endphp
 
 <a {{ $attributes->merge(['class' => $classes]) }}>
