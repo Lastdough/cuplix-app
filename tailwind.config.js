@@ -16,6 +16,9 @@ module.exports = {
                 sans: ['Nunito', ...defaultTheme.fontFamily.sans],
                 dmsans:['"DM Sans"', ...defaultTheme.fontFamily.sans]
             },
+            fontSize: {
+                txt : ['45px', '66px']
+            },
             colors: {
                 'sec': '#cdc2ae',
                 'pri': '#ece5c7',
@@ -23,6 +26,7 @@ module.exports = {
                 'bluePri' : '#3a4c5d',
                 'blueSec' : '#61819e',
                 'db3': '#dbdbdb',
+                'txtC': '#0A093D',
               },
         },
     },
