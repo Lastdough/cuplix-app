@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\MoviesController;
+use App\Http\Controllers\NewReleaseController;
+use App\Http\Controllers\TrendingController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,7 +18,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
-});
+})->name('welcome');;
 
 Route::middleware([
     'auth:sanctum',
@@ -27,11 +30,20 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/movies', function(){
-    return view('movies-menu');
-})->name('movies');
+Route::get('/moredetail', function(){
+    return view('more-detail');
+})->name('moredetail');
 
-Route::get('/trending', function(){
-    return view('trending-menu');
-})->name('trending');
+// Route::get('/trending', function(){
+//     return view('trending-menu');
+// })->name('trending');
+
+
+Route::get('/trending', [TrendingController::class, 'index'])->name('trending');
+
+Route::get('/movies', [MoviesController::class, 'index'])->name('movies');
+
+Route::get('/newrelease', [NewReleaseController::class, 'index'])->name('newrelease');
+
+
 
