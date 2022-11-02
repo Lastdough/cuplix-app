@@ -10,7 +10,6 @@
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.bunny.net/css2?family=Nunito:wght@400;600;700&display=swap">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
@@ -21,18 +20,31 @@
     @livewireStyles
 </head>
 
-<body class="antialiased">
-    {{-- <div
-        class="relative flex items-top justify-center min-h-screen  bg-gray-100 dark:bg-gray-900 sm:items-center py-4 sm:pt-0">
+<body class="antialiased gradient h-screen font-dmsans">
+    <livewire:welcome-dropdown>
 
-    </div> --}}
-    
-        {{-- <livewire:welcome-dropdown> --}}
-    {{-- <div class="h-screen w-full bg-pri ">
-        
-    </div> --}}
+        <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 mt-32">
+            <div class="kiri">
+                <div class="teks">
+                    <h1 class="font-bold text-txt text-txtC">
+                        Tempat cari rekomendasi tontonan
+                    </h1>
+                    <p class="font-normal text-lg text-gray-700">
+                        Bingung pengen nonton apaan, terus ngga tau nonton dimana, yuk cari rekomendasinya disini
+                    </p>
+                </div>
+                <div class="tombol">
+                    <a href="{{route('register')}}">
+                        <button type="button" class="mt-4 font-normal text-db3 bg-bluePri hover:bg-blueSec rounded-2xl text-xl px-9 py-4 text-center mr-2 mb-2">
+                            Mulai Searching
+                        </button>
+                    </a>
+                </div>
+            </div>
+            <div class="gambar">
 
-
+            </div>
+        </div>
 </body>
 
 </html>

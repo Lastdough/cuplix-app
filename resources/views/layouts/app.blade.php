@@ -22,12 +22,13 @@
     <body class="font-dmsans antialiased bg-back">
         <x-jet-banner />
 
-        <div class="min-h-screen">                
+        <div class="">
+            {{-- min-h-screen--}}
             <!-- Page Heading -->
             @if (isset($header))
             <div class="bg-pri">
                 @livewire('navigation-menu')
-                <header class="">
+                <header class="bg-pri">
                     <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
                         {{ $header }}
                     </div>
