@@ -53,7 +53,33 @@ class MoviesController extends Controller
      */
     public function show($id)
     {
-        //
+        $moviesDetail = Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/movie/'.$id.'?append_to_response=credits,videos,images')
+            ->json();
+
+        $watchProviderAll = Http::withToken(config('services.tmdb.token'))
+            ->get('https://api.themoviedb.org/3/movie/'.$id.'/watch/providers')
+            ->json(['results']);
+
+        if(array_key_exists("ID", $watchProviderAll)){
+            $ID = $watchProviderAll['ID'];
+            if (array_key_exists("flatrate", $ID)) {
+                $flatrate = $ID['flatrate'];
+            } else {
+                $flatrate = null;
+            }
+        } else {
+            // $ID = "Not Available in Indonesian Streaming Platform";
+            $flatrate = null;
+        }
+        
+        // dump($moviesDetail); 
+        // dump($ID); 
+            
+        return view('movies-detail', [
+            'item' => $moviesDetail,
+            'watch' => $flatrate,
+        ]);
     }
 
     /**
