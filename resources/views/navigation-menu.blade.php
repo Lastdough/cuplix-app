@@ -37,17 +37,7 @@
             </div> --}}
             <div class="flex ">
                 <div class="relative hidden md:block">
-                    <div class="flex absolute inset-y-0 right-0 items-center pr-4 pointer-events-none">
-                        <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path
-                                d="M13.2383 11H12.4411L12.1586 10.73C13.1475 9.59 13.7428 8.11 13.7428 6.5C13.7428 2.91 10.8064 0 7.18379 0C3.56118 0 0.624756 2.91 0.624756 6.5C0.624756 10.09 3.56118 13 7.18379 13C8.80841 13 10.3018 12.41 11.4522 11.43L11.7247 11.71V12.5L16.7701 17.49L18.2736 16L13.2383 11ZM7.18379 11C4.67117 11 2.64292 8.99 2.64292 6.5C2.64292 4.01 4.67117 2 7.18379 2C9.6964 2 11.7247 4.01 11.7247 6.5C11.7247 8.99 9.6964 11 7.18379 11Z"
-                                fill="#DBDBDB" />
-                        </svg>
-                        <span class="sr-only">Search icon</span>
-                    </div>
-                    <input type="text" id="search-navbar"
-                        class="block p-2 pl-5 text-db3 w-80  bg-bluePri rounded-full focus:ring-db3 focus:border-db3"
-                        placeholder="Search...">
+                    @livewire('search-dropdown')
                     {{-- <input type="text" id="search-navbar"
                         class="block p-2 pl-10 w-full text-gray-900 bg-gray-50 rounded-lg border border-gray-300 sm:text-sm  dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
                         placeholder="Search..."> --}}

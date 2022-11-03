@@ -22,7 +22,7 @@
                 @foreach ($trending as $item)
                 <div class=" rounded overflow-hidden mt-9">
                     <div class="shadow-lg mb-2">
-                        <a href="#">
+                        <a href="{{ route('moviesdetail', $item['id']) }}">
                             <img class="w-full hover:brightness-50 transition ease-in-out duration-150" src="{{ 'https://image.tmdb.org/t/p/w500/'.$item['poster_path'] }}" alt="poster">
                         </a>
                     </div>
@@ -36,7 +36,7 @@
                             <p class="text-gray-700 text-base ml-2">{{number_format($item['vote_average'], 1)}}/10</p>
                         </div>
                         <div class="text-base mt-1">
-                            <a href="#">
+                            <a href="{{ route('moviesdetail', $item['id']) }}">
                                 <span class="font-bold hover:text-blueSec">{{$item['title']}}</span>
                             </a>
                             <p class="text-gray-700 mt-1">{{ \Carbon\Carbon::parse($item['release_date'])->format('M Y') }}</p>
