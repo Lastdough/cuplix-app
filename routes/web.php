@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\MoreDetailController;
 use App\Http\Controllers\MoviesController;
 use App\Http\Controllers\NewReleaseController;
 use App\Http\Controllers\TrendingController;
@@ -30,9 +31,6 @@ Route::middleware([
     })->name('dashboard');
 });
 
-Route::get('/moredetail', function(){
-    return view('more-detail');
-})->name('moredetail');
 
 // Route::get('/trending', function(){
 //     return view('trending-menu');
@@ -42,8 +40,10 @@ Route::get('/moredetail', function(){
 Route::get('/trending', [TrendingController::class, 'index'])->name('trending');
 
 Route::get('/movies', [MoviesController::class, 'index'])->name('movies');
+Route::get('/moviesdetail/{detailid}', [MoviesController::class, 'show'])->name('moviesdetail');
 
 Route::get('/newrelease', [NewReleaseController::class, 'index'])->name('newrelease');
+
 
 
 
