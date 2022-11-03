@@ -24,25 +24,29 @@
     <livewire:welcome-dropdown>
 
         <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8 mt-32">
-            <div class="kiri">
-                <div class="teks">
-                    <h1 class="font-bold text-txt text-txtC">
-                        Tempat cari rekomendasi tontonan
-                    </h1>
-                    <p class="font-normal text-lg text-gray-700">
-                        Bingung pengen nonton apaan, terus ngga tau nonton dimana, yuk cari rekomendasinya disini
-                    </p>
+            <div class="">
+                <div class="flex flex-row">
+                    <div class="kiri">
+                        <div class="teks">
+                            <h1 class="font-bold text-txt text-txtC">
+                                Tempat cari rekomendasi tontonan
+                            </h1>
+                            <p class="font-normal text-lg text-gray-700">
+                                Bingung pengen nonton apaan, terus ngga tau nonton dimana, yuk cari rekomendasinya disini
+                            </p>
+                        </div>
+                        <div class="tombol">
+                            <a href="{{route('register')}}">
+                                <button type="button" class="mt-4 font-normal text-db3 bg-bluePri hover:bg-blueSec rounded-2xl text-xl px-9 py-4 text-center mr-2 mb-2">
+                                    Mulai Searching
+                                </button>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="gambar ml-5">
+                        @livewire('welcome.image')
+                    </div>
                 </div>
-                <div class="tombol">
-                    <a href="{{route('register')}}">
-                        <button type="button" class="mt-4 font-normal text-db3 bg-bluePri hover:bg-blueSec rounded-2xl text-xl px-9 py-4 text-center mr-2 mb-2">
-                            Mulai Searching
-                        </button>
-                    </a>
-                </div>
-            </div>
-            <div class="gambar">
-
             </div>
         </div>
 </body>
